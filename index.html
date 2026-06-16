@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minigolf score-tæller — Support & Privatliv</title>
+    <style>
+        :root {
+            --primary-color: #34c759;
+            --text-color: #1d1d1f;
+            --bg-color: #f5f5f7;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 60px auto;
+            padding: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .app-icon-placeholder {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #1a6b2e, var(--primary-color));
+            border-radius: 18px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(52, 199, 89, 0.3);
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            color: #86868b;
+            font-size: 16px;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #e5e5ea;
+            margin: 30px 0;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #48484a;
+            font-size: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--text-color);
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 15px;
+            margin-top: 10px;
+            transition: background 0.2s ease;
+        }
+
+        .btn:hover {
+            background: #323236;
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 12px;
+            color: #86868b;
+            text-align: center;
+        }
+
+        /* Skjul sprog-sektioner som standard */
+        .lang-section {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <div class="app-icon-placeholder">⛳</div>
+        
+        <!-- DANSK VERSION -->
+        <div id="dk-content" class="lang-section">
+            <h1>Minigolf score-tæller</h1>
+            <p class="subtitle">Support & Privatliv</p>
+            
+            <section>
+                <h2>Brug for hjælp?</h2>
+                <p>Hvis du oplever problemer, har fundet en fejl eller har forslag til nye funktioner, kan du oprette en sag (Issue) direkte på vores GitHub-side.</p>
+                <a href="https://github.com/BoEschricht/Minigolf-score-tracker/issues/new" target="_blank" class="btn">Opret support-sag på GitHub</a>
+            </section>
+
+            <hr>
+
+            <section>
+                <h2>Privatlivspolitik</h2>
+                <p><strong>Minigolf score-tæller</strong> indsamler, gemmer eller videresender ingen personlige data eller brugeroplysninger. Appen fungerer fuldstændig offline, og dine data bliver udelukkende gemt lokalt på din egen enhed.</p>
+            </section>
+        </div>
+
+        <!-- ENGELSK VERSION (Til Apple-testeren og udenlandske brugere) -->
+        <div id="en-content" class="lang-section">
+            <h1>Mini golf score tracker</h1>
+            <p class="subtitle">Support & Privacy</p>
+            
+            <section>
+                <h2>Need Help?</h2>
+                <p>If you encounter any issues, find bugs, or have feature requests, please open a ticket (Issue) directly on our GitHub repository.</p>
+                <a href="https://github.com/BoEschricht/Minigolf-score-tracker/issues/new" target="_blank" class="btn">Open Support Ticket on GitHub</a>
+            </section>
+
+            <hr>
+
+            <section>
+                <h2>Privacy Policy</h2>
+                <p><strong>Mini golf score tracker</strong> does not collect, store, or transmit any personal data or user information. The app operates completely offline, and your data is stored exclusively on your local device.</p>
+            </section>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2026 Bo Eschricht. Alle rettigheder forbeholdes.
+    </footer>
+</div>
+
+<script>
+    // Tjekker browserens sprogindstilling
+    const userLang = navigator.language || navigator.userLanguage;
+    
+    // Hvis sproget starter med 'da', vis dansk - ellers vis engelsk
+    if (userLang.startsWith('da')) {
+        document.getElementById('dk-content').style.display = 'block';
+    } else {
+        document.getElementById('en-content').style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
